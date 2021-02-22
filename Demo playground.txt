@@ -1,0 +1,179 @@
+import UIKit
+
+// single comment
+
+/* multiple line comment */
+
+print("val 1", "val 2", separator: " next ", terminator: " end")
+//3 properties: item, separator, terminator
+print()
+print("val1", "val 2")
+
+// data type
+
+// variables and constants
+let maxNumber = 10
+let str = "Hello"
+let max : Int = 10
+
+var text : String = "Hello World"
+
+print(text)
+
+print(" This is the text: \(text)")
+
+// Optionals
+var abc: Int?
+var s: String? = nil // means no value
+
+//Forced unwrapping
+
+var str1: String?
+str1 = "Hello"
+
+print(str1)
+print(str1!) // use of !
+
+// automatic unwrapping : replace ? with !
+var str2: String!
+str2 = "Hello"
+print(str2!) //
+
+// Tuples : hold multiple values
+
+var tupleName = (501, "not implemented")
+print(tupleName.0, tupleName.1)
+
+// Operators:
+// arithmetic: + - * / %
+// relational : == != > < >= <=
+// logical : && || !
+// bitwise: & | ^ ~ << >>
+
+// Conditions : if, if else, switch
+
+var a = 10
+var b : Int = 20
+
+// if
+
+if a > b{
+    print(" a is greater")
+} else {
+    print(" b is greater")
+}
+
+switch a{
+case 100:
+    print(100)
+case 10:
+    print(" case 10")
+default:
+    print("default")
+}
+
+let result = a > b ? "a is greater" : "b is greater"
+print(result)
+
+// Arrays
+var arr = [Int]() // empty array
+var arr1 : [Int] = [10, 20, 30]
+
+print(arr1[0])
+print(arr1[2])
+
+arr.append(10)
+arr.append(40) // inserting at the end
+print(arr[1])
+arr.insert(30, at: 1) // inserting at a specific position
+print(arr[1])
+
+arr += [50]
+print(arr[3])
+arr[2] = 60
+
+// Loops
+let name = ["Tom", "Sam", "Kate", "Ram"]
+
+for nm in name{
+    print(nm, terminator: " ")
+}
+print()
+
+for (index, item) in name.enumerated(){
+    print("Index: \(index) , Item: \(item)")
+}
+
+for i in 1...10{ // range: ...
+    print(i)
+}
+var ind = 10
+while ind < 20{
+    print(ind)
+    ind = ind + 2
+}
+
+// Function
+
+// basic function
+func sayHello(){
+    print("Hello")
+}
+sayHello()
+
+// function with parameter
+
+func sayHelloTo(name: String, age: Int){
+    print("Hello \(name), age \(age)")
+}
+sayHelloTo(name: "Satwika", age: 22)
+
+func sayHelloTo1(_ name: String, _ age: Int){
+    print("Hello \(name), age \(age)")
+}
+sayHelloTo1("Satwika", 22)
+
+// function with a return value
+func addFour (x: Int) -> Int{
+    return x + 4
+}
+let res = addFour(x: 12)
+print(res)
+print(addFour(x: 10))
+
+
+// Class
+class Spaceship{
+    var level = 100
+    var name: String
+    
+    init(name: String){
+        self.name = name
+    }
+    
+    func cruise(){
+        print("Cruising initiated for \(name) at fuel level \(level)")
+    }
+}
+
+var myShip : Spaceship = Spaceship(name: "Satwika")
+myShip.cruise()
+print(myShip.level, myShip.name)
+myShip.name = "ABC"
+myShip.level = 120
+myShip.cruise()
+
+/* let vs var object declaration
+with both let or var class objects, you update the data members i.e. name and level values. Difference arises in case of object assignment
+*/
+
+let obj1 : Spaceship = Spaceship(name: "abc")
+let obj2 : Spaceship = Spaceship(name: "xyz")
+//obj1 = obj2 // gives error
+
+var obj3 : Spaceship = Spaceship(name: "abc")
+var obj4 : Spaceship = Spaceship(name: "xyz")
+print(obj3.name)
+print(obj4.name)
+obj3 = obj4 // no error
+print(obj3.name) // obj3.name and obj4.name givs same result
