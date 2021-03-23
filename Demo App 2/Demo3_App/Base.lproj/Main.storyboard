@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Demo3_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPh-gf-afK">
+                                <rect key="frame" x="111.5" y="389" width="191" height="28"/>
+                                <color key="backgroundColor" red="0.97300761940000002" green="0.76522835889999996" blue="0.2699596386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Safari View Controller">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSafari:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yT1-Cd-h77"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ey-Go-bt6">
+                                <rect key="frame" x="111" y="477" width="192" height="28.5"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="WebView">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eMT-Xf-Hbt" kind="show" id="Pqp-tC-FQe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1Ey-Go-bt6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="5Fw-MA-p8r"/>
+                            <constraint firstItem="1Ey-Go-bt6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.463768" id="Ca5-Wm-nZt"/>
+                            <constraint firstItem="aPh-gf-afK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111.5" id="E2s-ol-lLp"/>
+                            <constraint firstItem="aPh-gf-afK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.461353" id="Hc5-74-Yh2"/>
+                            <constraint firstItem="aPh-gf-afK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YsX-Jr-LHR"/>
+                            <constraint firstItem="1Ey-Go-bt6" firstAttribute="top" secondItem="aPh-gf-afK" secondAttribute="bottom" constant="60" id="bzi-eg-Sf7"/>
+                            <constraint firstItem="aPh-gf-afK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="389" id="e28-xm-hIz"/>
+                            <constraint firstItem="1Ey-Go-bt6" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="qiC-yF-b2Y"/>
+                            <constraint firstItem="1Ey-Go-bt6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ur6-rl-QQt"/>
+                            <constraint firstItem="aPh-gf-afK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0334821" id="weB-gz-3Ft"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="x2b-WZ-KwG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="117"/>
+        </scene>
+        <!--Web ViewVC-->
+        <scene sceneID="tyh-iF-E6V">
+            <objects>
+                <viewController id="eMT-Xf-Hbt" customClass="WebViewVC" customModule="Demo3_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mSy-bv-YRe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71D-wa-VHk">
+                                <rect key="frame" x="0.0" y="70" width="414" height="738"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j8i-Tr-3Aw">
+                                <rect key="frame" x="20" y="18" width="50" height="28"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="UKB-ju-qNF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="71D-wa-VHk" firstAttribute="top" secondItem="yP4-V1-sQc" secondAttribute="top" constant="70" id="3Sz-cO-pgk"/>
+                            <constraint firstItem="j8i-Tr-3Aw" firstAttribute="top" secondItem="yP4-V1-sQc" secondAttribute="top" constant="18" id="Dp7-1n-ZqQ"/>
+                            <constraint firstItem="j8i-Tr-3Aw" firstAttribute="leading" secondItem="yP4-V1-sQc" secondAttribute="leading" constant="20" id="PbS-IB-Ior"/>
+                            <constraint firstItem="j8i-Tr-3Aw" firstAttribute="height" secondItem="mSy-bv-YRe" secondAttribute="height" multiplier="0.0334821" id="caw-li-VLl"/>
+                            <constraint firstItem="71D-wa-VHk" firstAttribute="leading" secondItem="yP4-V1-sQc" secondAttribute="leading" id="gNU-JO-AJE"/>
+                            <constraint firstItem="71D-wa-VHk" firstAttribute="bottom" secondItem="yP4-V1-sQc" secondAttribute="bottom" id="hOc-TQ-f9M"/>
+                            <constraint firstItem="j8i-Tr-3Aw" firstAttribute="width" secondItem="mSy-bv-YRe" secondAttribute="width" multiplier="0.120773" id="vkc-Gd-Q8T"/>
+                            <constraint firstItem="71D-wa-VHk" firstAttribute="trailing" secondItem="yP4-V1-sQc" secondAttribute="trailing" id="yOi-aA-PoG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yP4-V1-sQc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mLH-C6-4lz"/>
+                    <connections>
+                        <outlet property="webViewUrl" destination="71D-wa-VHk" id="PjH-R9-msz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iw8-7s-bhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="926.08695652173924" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+</document>
